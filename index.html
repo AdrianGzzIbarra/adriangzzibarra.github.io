@@ -5,15 +5,15 @@
   <title>Adrián Gzz Ibarra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Inter Variable (idéntica a la usada en sitios minimalistas tipo Dario Amodei) -->
+  <!-- Inter Variable (texto general) -->
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
   <style>
     /* ------------------------------
-       CONTENEDOR CENTRAL
+       CONTENEDOR CENTRAL (más estrecho)
     ------------------------------ */
     .container {
-      max-width: 640px;
+      max-width: 600px; /* antes 640px */
       margin: 0 auto;
       padding: 64px 24px;
     }
@@ -28,25 +28,29 @@
       color: #111;
       background: #f7f7f7;
       transition: background 0.3s ease, color 0.3s ease;
-      font-weight: 350; /* Inter Variable permite pesos intermedios */
+      font-weight: 350;
     }
 
     /* ------------------------------
        TIPOGRAFÍA Y ESPACIADO
+       (H1 usa SERIF como en la imagen)
     ------------------------------ */
     h1 {
-      font-size: 3.45rem;
-      font-weight: 600;
-      margin-bottom: 0.55rem;
-      letter-spacing: -0.6px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 3.6rem;
+      font-weight: 400;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.5px;
+      color: #111;
     }
 
     h2 {
       font-size: 1.95rem;
       font-weight: 500;
-      margin-top: 2.9rem;
+      margin-top: 2.8rem;
       margin-bottom: 0.85rem;
       letter-spacing: -0.3px;
+      font-family: "Inter var", sans-serif;
     }
 
     p {
