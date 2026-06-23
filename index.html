@@ -5,64 +5,62 @@
   <title>Adrián Gzz Ibarra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Tipografía Inter (igual que darioamodei.com) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
     /* ------------------------------
-       CONTENEDOR CENTRAL
+       CONTENEDOR CENTRAL (similar a Dario)
     ------------------------------ */
     .container {
-      max-width: 630px;
+      max-width: 640px;        /* Dario usa ~640px */
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 48px 24px;      /* más aire, estilo editorial */
     }
 
     /* ------------------------------
-       MODO CLARO (DEFAULT)
+       MODO CLARO
     ------------------------------ */
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 20px;
-      line-height: 1.7;
+      line-height: 1.65;       /* similar a Dario */
       color: #0A1A2F;
-      background: #e8e8e8;
+      background: #f5f5f5;     /* tono muy similar al fondo de Dario */
       transition: background 0.3s ease, color 0.3s ease;
     }
 
+    /* ------------------------------
+       TIPOGRAFÍA Y ESPACIADO
+    ------------------------------ */
     h1 {
       font-size: 3rem;
-      margin-bottom: 0.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
 
-    /* Encabezados h2 con espaciado reducido */
     h2 {
-      margin-top: 1.8rem;
-      font-size: 2rem;
-      padding-bottom: 0rem;
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-top: 2.4rem;      /* espacio entre secciones (similar a Dario) */
+      margin-bottom: 0.8rem;   /* espacio entre h2 y párrafo siguiente */
     }
 
-    /* Reduce espacio entre secciones completas */
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;   /* espaciado editorial */
     }
 
-    /* Reduce espacio entre h2 y su párrafo siguiente (30% menos) */
-    h2 + p {
-      margin-top: 0.7rem;
+    ul {
+      margin-top: 0.4rem;
+      margin-bottom: 1.4rem;
+      padding-left: 22px;
     }
 
-    /* Reduce espacio entre h2 y la lista siguiente (30% menos) */
-    h2 + ul {
-      margin-top: 0.7rem;
+    li {
+      margin-bottom: 0.4rem;
     }
 
-    /* Reduce espacio entre una lista y el siguiente h2 */
-    ul + h2 {
-      margin-top: 1.2rem;
-    }
-    /* Encabezados en azul */
-    h1, h2, h3, h4, h5, h6 {
-      color: #0A1A2F;
-    }
-
+    /* Enlaces */
     a {
       color: #0A1A2F;
       text-decoration: none;
@@ -72,13 +70,8 @@
       text-decoration: underline;
     }
 
-    ul {
-      padding-left: 25px;
-      margin-left: 0;
-    }
-
     /* ------------------------------
-       BOTÓN DE MODO OSCURO
+       BOTÓN MODO OSCURO
     ------------------------------ */
     #darkModeToggle {
       position: fixed;
@@ -106,20 +99,12 @@
     }
 
     body.dark h1,
-    body.dark h2,
-    body.dark h3,
-    body.dark h4,
-    body.dark h5,
-    body.dark h6 {
+    body.dark h2 {
       color: #e8e8e8;
     }
 
     body.dark a {
       color: #e8e8e8;
-    }
-
-    body.dark h2 {
-      border-bottom: none;
     }
   </style>
 </head>
@@ -148,7 +133,7 @@
 
     <h2>Research</h2>
     <p>
-      <a style="text-decoration: underline;" 
+      <a style="text-decoration: underline;"
          href="https://scholar.google.com/citations?hl=es&user=PNWsicsAAAAJ&view_op=list_works&sortby=pubdate">
          Google Scholar
       </a>
@@ -163,9 +148,9 @@
     </ul>
 
     <h2>Contact</h2>
-    <p> 
-      <a href="https://github.com/AdrianGzzIbarra">GitHub</a> · 
-      <a href="https://www.linkedin.com/in/adrián-amilcare-gonzález-ibarra-0b3a5483">LinkedIn</a> · 
+    <p>
+      <a href="https://github.com/AdrianGzzIbarra">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/adrián-amilcare-gonzález-ibarra-0b3a5483">LinkedIn</a> ·
       <a href="https://scholar.google.com/citations?hl=es&user=PNWsicsAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
     </p>
 
