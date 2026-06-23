@@ -34,9 +34,9 @@
 
     /* Encabezados h2 con espaciado reducido */
     h2 {
-      margin-top: 1.8rem;   /* espacio entre secciones */
+      margin-top: 1.8rem;
       font-size: 2rem;
-      padding-bottom: 0rem; /* sin espacio extra debajo */
+      padding-bottom: 0rem;
     }
 
     /* Reduce espacio entre secciones completas */
@@ -44,9 +44,14 @@
       margin-bottom: 1rem;
     }
 
-    /* Reduce espacio entre h2 y su siguiente párrafo (30% menos) */
+    /* Reduce espacio entre h2 y su párrafo siguiente (30% menos) */
     h2 + p {
-      margin-top: 0.7rem; /* valor calculado para reducción real del 30% */
+      margin-top: 0.7rem;
+    }
+
+    /* Reduce espacio entre h2 y la lista siguiente (30% menos) */
+    h2 + ul {
+      margin-top: 0.7rem;
     }
 
     /* Encabezados en azul */
