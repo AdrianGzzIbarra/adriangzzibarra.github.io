@@ -5,28 +5,28 @@
   <title>Adrián Gzz Ibarra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tipografía Inter (igual que darioamodei.com) -->
+  <!-- Tipografía Inter (similar a Dario Amodei) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     /* ------------------------------
-       CONTENEDOR CENTRAL (similar a Dario)
+       CONTENEDOR CENTRAL
     ------------------------------ */
     .container {
-      max-width: 640px;        /* Dario usa ~640px */
+      max-width: 640px;
       margin: 0 auto;
-      padding: 48px 24px;      /* más aire, estilo editorial */
+      padding: 60px 24px;
     }
 
     /* ------------------------------
-       MODO CLARO
+       ESTILO BASE (similar a Dario)
     ------------------------------ */
     body {
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: "Inter", sans-serif;
       font-size: 20px;
-      line-height: 1.65;       /* similar a Dario */
-      color: #0A1A2F;
-      background: #f5f5f5;     /* tono muy similar al fondo de Dario */
+      line-height: 1.65;
+      color: #111;
+      background: #fafafa;
       transition: background 0.3s ease, color 0.3s ease;
     }
 
@@ -34,85 +34,106 @@
        TIPOGRAFÍA Y ESPACIADO
     ------------------------------ */
     h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.5px;
     }
 
     h2 {
       font-size: 1.9rem;
       font-weight: 500;
-      margin-top: 2.4rem;      /* espacio entre secciones (similar a Dario) */
-      margin-bottom: 0.8rem;   /* espacio entre h2 y párrafo siguiente */
+      margin-top: 2.8rem;
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.3px;
     }
 
     p {
-      margin-bottom: 1.2rem;   /* espaciado editorial */
+      margin-bottom: 1.25rem;
     }
 
     ul {
       margin-top: 0.4rem;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.6rem;
       padding-left: 22px;
     }
 
     li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
     }
 
-    /* Enlaces */
+    /* ------------------------------
+       ENLACES (estilo Dario)
+    ------------------------------ */
     a {
-      color: #0A1A2F;
-      text-decoration: none;
+      color: #111;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
     }
 
     a:hover {
-      text-decoration: underline;
+      opacity: 0.7;
     }
 
     /* ------------------------------
-       BOTÓN MODO OSCURO
+       SWITCH DE MODO OSCURO (estilo moderno)
     ------------------------------ */
-    #darkModeToggle {
+    .switch {
       position: fixed;
       top: 20px;
       right: 20px;
-      padding: 8px 14px;
-      background: #0A1A2F;
-      color: white;
-      border: none;
-      border-radius: 6px;
+      width: 52px;
+      height: 28px;
+      background: #ccc;
+      border-radius: 20px;
       cursor: pointer;
-      font-size: 14px;
+      transition: background 0.3s ease;
     }
 
-    #darkModeToggle:hover {
-      opacity: 0.85;
+    .switch::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 22px;
+      height: 22px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    body.dark .switch {
+      background: #555;
+    }
+
+    body.dark .switch::after {
+      transform: translateX(24px);
     }
 
     /* ------------------------------
-       MODO OSCURO
+       MODO OSCURO (similar a Dario)
     ------------------------------ */
     body.dark {
-      background: #0A1A2F;
-      color: #e8e8e8;
+      background: #111;
+      color: #e6e6e6;
+    }
+
+    body.dark a {
+      color: #e6e6e6;
     }
 
     body.dark h1,
     body.dark h2 {
-      color: #e8e8e8;
-    }
-
-    body.dark a {
-      color: #e8e8e8;
+      color: #e6e6e6;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Botón de modo oscuro -->
-  <button id="darkModeToggle">Dark Mode</button>
+  <!-- Switch de modo oscuro -->
+  <div class="switch" id="darkSwitch"></div>
 
   <div class="container">
 
@@ -133,9 +154,8 @@
 
     <h2>Research</h2>
     <p>
-      <a style="text-decoration: underline;"
-         href="https://scholar.google.com/citations?hl=es&user=PNWsicsAAAAJ&view_op=list_works&sortby=pubdate">
-         Google Scholar
+      <a href="https://scholar.google.com/citations?hl=es&user=PNWsicsAAAAJ&view_op=list_works&sortby=pubdate">
+        Google Scholar
       </a>
     </p>
 
@@ -157,14 +177,12 @@
   </div>
 
   <script>
-    const toggle = document.getElementById("darkModeToggle");
-    toggle.addEventListener("click", () => {
+    const sw = document.getElementById("darkSwitch");
+    sw.addEventListener("click", () => {
       document.body.classList.toggle("dark");
-      toggle.textContent = document.body.classList.contains("dark")
-        ? "Light Mode"
-        : "Dark Mode";
     });
   </script>
 
 </body>
 </html>
+
