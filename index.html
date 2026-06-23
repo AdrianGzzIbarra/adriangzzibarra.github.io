@@ -32,22 +32,23 @@
       margin-bottom: 0.3rem;
     }
 
+    /* Encabezados h2 con espaciado reducido */
     h2 {
-      margin-top: 1.8rem;
+      margin-top: 1.8rem;   /* espacio entre secciones */
       font-size: 2rem;
-      padding-bottom: 0rem;
+      padding-bottom: 0rem; /* sin espacio extra debajo */
     }
 
-/* Reduce espacio entre secciones completas */
+    /* Reduce espacio entre secciones completas */
     p {
       margin-bottom: 1rem;
     }
 
-/* Reduce espacio entre h2 y su párrafo siguiente */
+    /* Reduce espacio entre h2 y su siguiente párrafo (30% menos) */
     h2 + p {
-    margin-top: 0.3rem;
-  }
-    
+      margin-top: 0.7rem; /* valor calculado para reducción real del 30% */
+    }
+
     /* Encabezados en azul */
     h1, h2, h3, h4, h5, h6 {
       color: #0A1A2F;
@@ -61,9 +62,10 @@
     a:hover {
       text-decoration: underline;
     }
+
     ul {
-    padding-left: 25px;
-    margin-left: 0;
+      padding-left: 25px;
+      margin-left: 0;
     }
 
     /* ------------------------------
@@ -91,7 +93,7 @@
     ------------------------------ */
     body.dark {
       background: #0A1A2F;
-      color: #e8e8e8;              /* 🔵 Azul casi blanco para TODO el texto */
+      color: #e8e8e8;
     }
 
     body.dark h1,
@@ -100,11 +102,11 @@
     body.dark h4,
     body.dark h5,
     body.dark h6 {
-      color: #e8e8e8;              /* 🔵 Encabezados del mismo color */
+      color: #e8e8e8;
     }
 
     body.dark a {
-      color: #e8e8e8;              /* 🔵 Enlaces del mismo color */
+      color: #e8e8e8;
     }
 
     body.dark h2 {
@@ -128,6 +130,7 @@
       and applied research. Trained in Extractive Metallurgy, I now integrate chemistry, economics, and technology transfer
       to address complex problems through a rigorous scientific and engineering perspective.
     </p>
+
     <p>
       My work includes mineral dissolution mechanisms, hydrometallurgical extraction processes, kinetic and thermodynamic analysis,
       mineral characterization, and technical evaluation of mining operations, including reserve assessment and resource exploitation.
@@ -136,10 +139,10 @@
 
     <h2>Research</h2>
     <p>
-    <a style="text-decoration: underline;" 
-     href="https://scholar.google.com/citations?hl=es&user=PNWsicsAAAAJ&view_op=list_works&sortby=pubdate">
-     Google Scholar
-  </a>
+      <a style="text-decoration: underline;" 
+         href="https://scholar.google.com/citations?hl=es&user=PNWsicsAAAAJ&view_op=list_works&sortby=pubdate">
+         Google Scholar
+      </a>
     </p>
 
     <h2>Projects</h2>
